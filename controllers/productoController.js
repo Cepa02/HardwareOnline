@@ -43,10 +43,14 @@ exports.obtenerProducto = async (req, res) => {
 };
 
 exports.actualizarProducto = async (req, res) => {
-    const {nombre} = req.body;
+    const {nombre, marca, descripcion, precio, stock} = req.body;
     const nuevoProducto = {};
     if(nombre){
         nuevoProducto.nombre = nombre;
+        nuevoProducto.marca = marca;
+        nuevoProducto.precio = precio;
+        nuevoProducto.descripcion = descripcion;
+        nuevoProducto.stock = stock;
     }
 
     try {
