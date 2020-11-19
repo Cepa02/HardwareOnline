@@ -25,6 +25,11 @@ const ProductoSchema = mongoose.Schema({
     registro: {
         type: Date,
         default: Date.now()
+    },
+    imagen: {
+        type: String,
+        require: false,
+        default: 'default'
     }
 });
 
