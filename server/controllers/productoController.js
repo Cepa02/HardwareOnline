@@ -16,7 +16,7 @@ exports.crearProducto = async (req, res) => {
 exports.obtenerProductos = async (req, res) => {
     try {
         const productos = await Producto.find();
-        res.json({productos})
+        res.set('Access-Control-Allow-Origin', '*').json({productos})
 
     } catch (error) {
         console.error(error);
