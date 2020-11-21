@@ -4,7 +4,7 @@ const conectarDb = require("./config/db");
 const app = express();
 conectarDb();
 
-app.use(cors())
+app.use(cors());
 app.use(express.json({extend:true}));
 
 const port = process.env.PORT || 4000;
